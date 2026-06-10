@@ -16,6 +16,7 @@ const locationCategories = [
   {
     category: 'Infrastructure & Road Connectivity',
     items: [
+      { name: 'Mahalaxmi Railway Station', dist: '5 Mins*' },
       { name: 'Upcoming Metro Line 3', dist: '5 Mins*' },
       { name: 'Bandra Worli Sea Link', dist: '16 Mins*' },
       { name: 'Coastal Road', dist: '18 Mins*' },

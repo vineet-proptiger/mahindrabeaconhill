@@ -50,7 +50,7 @@ const CurvedCorners = ({ bg = BG }) => {
 }
 
 /* SVG icons */
-const IconGate = () => (
+const IconBuilding = () => (
   <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
     stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
     <path d="M3 21h18" />
@@ -83,43 +83,50 @@ const IconSmart = () => (
     <path d="M9 9l2 2 4-4" />
   </svg>
 )
-const IconStar = () => (
+const IconMountain = () => (
   <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
     stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+    <path d="M8 3l4 8 5-5 5 15H2L8 3z" />
   </svg>
 )
-const IconRoad = () => (
+const IconSunCloud = () => (
   <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
     stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-    <circle cx="12" cy="10" r="3" />
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+    <path d="M16 12a4 4 0 0 0-8 0" />
+    <path d="M5 18a4 4 0 0 1 3.5-3.9 6 6 0 0 1 11-.1 4 4 0 0 1-2.5 7.9H8a4 4 0 0 1-3-4" />
   </svg>
 )
-const IconRupee = () => (
+const IconWind = () => (
   <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
     stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M6 3h12M6 8h12M6 13l8 8M6 8a5 5 0 005 5" />
+    <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" />
   </svg>
 )
-const IconKey = () => (
+const IconLightning = () => (
   <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
     stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="7" cy="17" r="4" />
-    <path d="M10.5 13.5L21 3" />
-    <path d="M19 5l2 2M16 8l2 2" />
+    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+  </svg>
+)
+const IconWaves = () => (
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+    stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
   </svg>
 )
 
 const highlights = [
-  { title: 'LUXURY HIGH-RISE', desc: 'An iconic luxury high-rise in Mahalaxmi by Mahindra Lifespaces, crafted with precision engineering and world-class finishes.', Icon: IconGate },
-  { title: 'PRIME SOUTH MUMBAI', desc: 'Located in the heart of Mahalaxmi, one of South Mumbai\'s most prestigious and well-connected neighbourhoods.', Icon: IconTrees },
-  { title: 'PREMIUM 3, 3.5 & 4 BHK', desc: 'Spacious and elegantly designed 3, 3.5, and 4 BHK residences with expansive layouts and premium specifications.', Icon: IconHome },
-  { title: 'SMART HOME FEATURES', desc: 'Integrated smart home technology for enhanced comfort, modern convenience, and a truly future-ready lifestyle.', Icon: IconSmart },
-  { title: 'CURATED AMENITIES', desc: 'A thoughtfully curated collection of lifestyle amenities promoting wellness, recreation, and vibrant community living.', Icon: IconStar },
-  { title: 'ICONIC SKYLINE VIEWS', desc: 'Breathtaking panoramic views of South Mumbai\'s skyline, sea, and lush racecourse from elevated residences.', Icon: IconRoad },
-  { title: 'MAHARERA REGISTERED', desc: 'Fully MAHARERA registered project — MAHARERA No: PM1170002600357. Transparent pricing and legal assurance.', Icon: IconRupee },
-  { title: 'TRUSTED DEVELOPER', desc: 'Backed by Mahindra Lifespaces, India\'s leading sustainable real estate developer with decades of trust.', Icon: IconKey },
+  { title: 'Landmark High-Rise', desc: 'An iconic high-rise in Mahalaxmi by Mahindra, crafted with world-class finishes.', Icon: IconBuilding },
+  { title: 'Positive Energy Homes', desc: 'Crafted spaces radiating positivity for a harmonious living experience in South Mumbai.', Icon: IconHome },
+  { title: 'Skyline Views', desc: 'Panoramic views of the sea, city skyline, and lush racecourse from your private balcony.', Icon: IconMountain },
+  { title: 'Spacious Residences', desc: 'Elegantly designed 3, 3.5 & 4 BHK residences with expansive layouts and premium specs.', Icon: IconHome },
+  { title: 'Smart Home Features', desc: 'Smart home technology integrated for enhanced comfort and a future-ready lifestyle.', Icon: IconSmart },
+  { title: 'Climate-Responsive Design', desc: 'Optimized architectural design adapting to the local climate for year-round comfort.', Icon: IconSunCloud },
+  { title: 'Natural Ventilation', desc: 'Intelligently planned layouts promoting cross-ventilation and abundant natural daylight.', Icon: IconWind },
+  { title: 'Energy-Efficient Living', desc: 'Eco-friendly features designed to minimize energy consumption and your carbon footprint.', Icon: IconLightning },
+  // { title: 'Landscaped Open Spaces', desc: 'Meticulously landscaped gardens providing a serene, lush green escape in the city.', Icon: IconTrees },
+  // { title: 'Wellness-Focused Amenities', desc: 'Curated lifestyle amenities promoting wellness, recreation, and vibrant community living.', Icon: IconWaves },
 ]
 
 const Highlights = ({ setIsOpen }) => (
