@@ -10,13 +10,15 @@ const locationCategories = [
     items: [
       { name: 'Lower Parel', dist: '10 Mins*' },
       { name: 'Nariman Point', dist: '25 Mins*' },
+      { name: 'Bandra-Kurla Complex (BKC)', dist: '30 Mins*' },
     ],
   },
   {
     category: 'Infrastructure & Road Connectivity',
     items: [
-      { name: 'Mahalaxmi Railway Station', dist: '5 Mins*' },
       { name: 'Upcoming Metro Line 3', dist: '5 Mins*' },
+      { name: 'Bandra Worli Sea Link', dist: '16 Mins*' },
+      { name: 'Coastal Road', dist: '18 Mins*' },
     ],
   },
   {
@@ -24,6 +26,7 @@ const locationCategories = [
     items: [
       { name: 'Hill Spring International School', dist: '5 Mins*' },
       { name: 'Christ Church School', dist: '5 Mins*' },
+      { name: 'St. Ignatius High School', dist: '10 Mins*' },
     ],
   },
   {
