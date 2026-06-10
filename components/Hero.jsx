@@ -148,6 +148,28 @@ const Hero = ({ setIsOpen }) => {
           display: block;
         }
 
+        .hero-image {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+
+        /* ─── Desktop ─── */
+        @media (min-width: 1024px) {
+          .hero-container {
+            aspect-ratio: 21/9;
+          }
+          .slide-layer {
+            position: absolute;
+            height: 100%;
+          }
+          .hero-image {
+            height: 100%;
+            object-fit: cover;
+            object-position: center 80%;
+          }
+        }
+
         .carousel-dots {
           position: absolute;
           bottom: 24px;
@@ -170,12 +192,20 @@ const Hero = ({ setIsOpen }) => {
 
         /* ─── Tablet ─── */
         @media (min-width: 768px) and (max-width: 1023px) {
+          .hero-container {
+            aspect-ratio: 16/7;
+          }
+          .slide-layer {
+            position: absolute;
+            height: 100%;
+          }
+          .hero-image {
+            height: 100%;
+            object-fit: cover;
+            object-position: center 80%;
+          }
           .hero-content {
             padding: 0 28px 56px !important;
-          }
-          .carousel-dots {
-            bottom: 20px;
-            right: 28px;
           }
         }
 
@@ -235,7 +265,7 @@ const Hero = ({ setIsOpen }) => {
             alt={`Banner ${index + 1}`}
             width={1920}
             height={800}
-            style={{ width: '100%', height: 'auto', display: 'block' }}
+            className="hero-image"
             priority={index === 0}
             sizes="100vw"
           />
