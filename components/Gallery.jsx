@@ -60,7 +60,7 @@ const Gallery = ({ setIsOpen }) => {
             <h2 style={{
               fontFamily: F_JOST, fontWeight: '700', fontSize: '18px',
               color: '#684C1B', letterSpacing: '0.22em', textTransform: 'uppercase', margin: 0,
-            }} className="text-center">PROJECT GALLERY</h2>
+            }} className="text-center">MAHINDRA BEACON HILL GALLERY</h2>
           </div>
         </div>
 

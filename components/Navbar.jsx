@@ -52,8 +52,8 @@ const Navbar = ({ setIsOpen }) => {
           className="hidden lg:flex"
           style={{ alignItems: 'center', gap: '36px', marginRight: '52px' }}
         >
-          <a href="#"         style={aStyle} onMouseEnter={hover} onMouseLeave={unhover}>HOME</a>
-          <a href="#overview" style={aStyle} onMouseEnter={hover} onMouseLeave={unhover}>ABOUT US</a>
+          <a href="#overview"   style={aStyle} onMouseEnter={hover} onMouseLeave={unhover}>OVERVIEW</a>
+          <a href="#masterplan" style={aStyle} onMouseEnter={hover} onMouseLeave={unhover}>FLOOR PLANS</a>
         </div>
 
         {/* CENTER LOGO */}
@@ -137,10 +137,10 @@ const Navbar = ({ setIsOpen }) => {
       {mobileOpen && (
         <div style={{ background: '#fff', borderTop: '1px solid #f0f0f0' }}>
           {[
-            { label: 'HOME',       href: '#'        },
-            { label: 'ABOUT US',   href: '#overview' },
-            { label: 'AMENITIES',  href: '#amenities' },
-            { label: 'GALLERY',    href: '#homes-designed' },
+            { label: 'OVERVIEW',    href: '#overview' },
+            { label: 'FLOOR PLANS', href: '#masterplan' },
+            { label: 'AMENITIES',   href: '#amenities' },
+            { label: 'GALLERY',     href: '#homes-designed' },
           ].map(({ label, href }, i) => (
             <a key={i} href={href}
               onClick={() => setMobileOpen(false)}

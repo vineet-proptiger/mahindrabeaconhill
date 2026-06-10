@@ -83,7 +83,7 @@ const Hero = ({ setIsOpen }) => {
         /* Price line */
         .hero-price-line {
           font-family: var(--font-sans), Open Sans, sans-serif;
-          font-size: clamp(11px, 1.1vw, 15px);
+          font-size: clamp(13px, 1.5vw, 18px);
           color: rgba(255,255,255,0.88);
           margin: 0 0 22px;
           display: flex;
@@ -93,16 +93,22 @@ const Hero = ({ setIsOpen }) => {
         }
 
         @keyframes heroPriceBlink {
-          0%, 80%  { opacity: 1; }
-          85%, 100% { opacity: 0.25; }
+          0%, 75% { 
+            opacity: 1; 
+            text-shadow: 0 0 8px rgba(255,255,255,0.6); 
+          }
+          76%, 100% { 
+            opacity: 0; 
+            text-shadow: none; 
+          }
         }
 
         .hero-price-amt {
           font-family: var(--font-jost), Montserrat, sans-serif;
-          font-size: clamp(16px, 2vw, 28px);
+          font-size: clamp(18px, 2.5vw, 32px);
           font-weight: 800;
           color: #fff;
-          animation: heroPriceBlink 1.6s step-end infinite;
+          animation: heroPriceBlink 1.4s infinite;
           display: inline-block;
         }
 
@@ -293,6 +299,24 @@ const Hero = ({ setIsOpen }) => {
           Premium 3, 3.5 &amp; 4 BHK Residences Starting at&nbsp;
           <span className="hero-price-amt">₹ 6.30 Cr*</span>
         </p>
+
+        {/* Bullet Points */}
+        <div style={{ marginBottom: '24px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          {[
+            'Avail Exclusive EOI Benefits',
+            'Exclusive Rooftop Lounge & Amenities',
+            'Book With EOI - ₹9 Lakhs'
+          ].map((text, i) => (
+            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#fff' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand, #A9262D)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, backgroundColor: '#fff', borderRadius: '50%', padding: '2px' }}>
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span style={{ fontFamily: 'var(--font-sans), Open Sans, sans-serif', fontSize: 'clamp(13px, 1.5vw, 18px)', fontWeight: '500', letterSpacing: '0.02em', textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>
+                {text}
+              </span>
+            </div>
+          ))}
+        </div>
 
         {/* CTA Row */}
         <div className="hero-cta-row">

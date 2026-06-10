@@ -42,7 +42,7 @@ const CurvedCorners = ({ bg = '#fff' }) => {
 const infoItems = [
   { label: 'LOCATION',   value: 'MAHALAXMI, SOUTH MUMBAI' },
   { label: 'TYPE',       value: '3, 3.5 & 4 BHK'  },
-  { label: 'PRICE',      value: 'FROM ₹6.30 CR*'          },
+  { label: 'LAND PARCEL', value: '1.71 ACRE' },
 ]
 
 const Overview = ({ setIsOpen }) => (
@@ -56,15 +56,22 @@ const Overview = ({ setIsOpen }) => (
     }}>
 
       {/* ── Section Heading ── */}
-      <div style={{ marginBottom: '32px' }} data-aos="fade-up">
+      <div style={{ marginBottom: '32px', textAlign: 'center' }} data-aos="fade-up">
         <h2 style={{
           fontFamily: F_JOST, fontWeight: '700', fontSize: '17px',
           color: '#3A2A0E', letterSpacing: '0.22em',
-          textTransform: 'uppercase', margin: 0,
+          textTransform: 'uppercase', margin: '0 0 10px 0',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
         }}>
-          PROJECT OVERVIEW
+          WELCOME TO MAHINDRA MAHALAXMI
         </h2>
+        <h3 style={{
+          fontFamily: F_JOST, fontWeight: '600', fontSize: '16px',
+          color: '#A9262D', letterSpacing: '0.05em',
+          textTransform: 'capitalize', margin: 0,
+        }}>
+          Mahindra Mahalaxmi New Launch
+        </h3>
       </div>
 
       {/* ── Paragraphs ── */}
