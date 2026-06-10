@@ -1,9 +1,22 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { heroImages } from '../lib/images'
 
+const slides = [
+  { img: heroImages.banner },
+  { img: heroImages.banner2 }
+]
+
 const Hero = ({ setIsOpen }) => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 4000)
+    return () => clearInterval(timer)
+  }, [])
 
   return (
     <section className="hero-container">
@@ -12,7 +25,6 @@ const Hero = ({ setIsOpen }) => {
           position: relative;
           margin-top: 80px;
           height: auto;
-          aspect-ratio: 16/7;
           overflow: hidden;
           background: #111;
           display: block;
@@ -124,13 +136,46 @@ const Hero = ({ setIsOpen }) => {
           white-space: nowrap;
         }
 
+        .slide-layer {
+          position: relative;
+          width: 100%;
+          opacity: 0;
+          display: none;
+          transition: opacity 1s ease-in-out;
+        }
+        .slide-layer.active {
+          opacity: 1;
+          display: block;
+        }
+
+        .carousel-dots {
+          position: absolute;
+          bottom: 24px;
+          right: 44px;
+          display: flex;
+          gap: 8px;
+          z-index: 20;
+        }
+        .carousel-dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.4);
+          cursor: pointer;
+          transition: background 0.3s;
+        }
+        .carousel-dot.active {
+          background: #fff;
+        }
+
         /* ─── Tablet ─── */
         @media (min-width: 768px) and (max-width: 1023px) {
-          .hero-container {
-            aspect-ratio: 4/3 !important;
-          }
           .hero-content {
             padding: 0 28px 56px !important;
+          }
+          .carousel-dots {
+            bottom: 20px;
+            right: 28px;
           }
         }
 
@@ -140,20 +185,12 @@ const Hero = ({ setIsOpen }) => {
             margin-top: 0px !important;
             padding-top: 80px !important;
             height: auto !important;
-            aspect-ratio: auto !important;
             display: flex !important;
             flex-direction: column !important;
           }
 
           .hero-overlay {
             display: none !important;
-          }
-
-          .hero-carousel-img {
-            position: relative !important;
-            width: 100% !important;
-            aspect-ratio: 3/4 !important;
-            height: auto !important;
           }
 
           .hero-content {
@@ -164,57 +201,46 @@ const Hero = ({ setIsOpen }) => {
 
           .hero-cta-row {
             flex-direction: column !important;
-            align-items: flex-start !important;
-            gap: 10px !important;
+            align-items: center !important;
+            gap: 12px !important;
+            width: 100%;
           }
 
-          .hero-btn-outline,
-          .hero-btn-wa {
+          .hero-cta-row > button,
+          .hero-cta-row > a {
             width: 100% !important;
             justify-content: center !important;
+            text-align: center;
+            padding: 12px 10px !important;
+            font-size: 11px !important;
+            white-space: normal !important;
           }
 
           .hero-rera {
             font-size: 10px !important;
           }
+
+          .carousel-dots {
+            bottom: unset;
+            top: 90px;
+            right: 12px;
+          }
         }
       `}</style>
 
-      {/* ── Desktop Banner ── */}
-      <div className="hidden lg:block" style={{ position: 'absolute', inset: 0 }}>
-        <Image
-          src={heroImages.banner1Desk}
-          alt="Mahindra Beacon Hill Desktop Banner"
-          fill
-          className="object-fill"
-          priority
-          sizes="100vw"
-        />
-      </div>
-
-      {/* ── Tablet Banner ── */}
-      <div className="hidden md:block lg:hidden" style={{ position: 'absolute', inset: 0 }}>
-        <Image
-          src={heroImages.banner1tab}
-          alt="Mahindra Beacon Hill Tablet Banner"
-          fill
-          className="object-fill"
-          priority
-          sizes="100vw"
-        />
-      </div>
-
-      {/* ── Mobile Banner ── */}
-      <div className="block md:hidden hero-carousel-img">
-        <Image
-          src={heroImages.bnnner1sm}
-          alt="Mahindra Beacon Hill Mobile Banner"
-          fill
-          className="object-fill"
-          priority
-          sizes="100vw"
-        />
-      </div>
+      {slides.map((slide, index) => (
+        <div key={index} className={`slide-layer ${index === currentSlide ? 'active' : ''}`}>
+          <Image
+            src={slide.img}
+            alt={`Banner ${index + 1}`}
+            width={1920}
+            height={800}
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+            priority={index === 0}
+            sizes="100vw"
+          />
+        </div>
+      ))}
 
       {/* ── Dark overlay for text legibility ── */}
       <div className="hero-overlay" />
@@ -271,17 +297,7 @@ const Hero = ({ setIsOpen }) => {
             WhatsApp for Instant Details
           </a>
 
-          {/* MAHARERA */}
-          {/* <span className="hero-rera hidden sm:inline">
-            MAHARERA Number: PM1170002600357
-          </span> */}
-
         </div>
-
-        {/* MAHARERA — mobile only below buttons */}
-        {/* <p className="hero-rera sm:hidden" style={{ marginTop: '10px' }}>
-          MAHARERA Number: PM1170002600357
-        </p> */}
 
       </div>
     </section>
@@ -289,3 +305,4 @@ const Hero = ({ setIsOpen }) => {
 }
 
 export default Hero
+

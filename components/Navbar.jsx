@@ -58,10 +58,16 @@ const Navbar = ({ setIsOpen }) => {
 
         {/* CENTER LOGO */}
         <a href="#" style={{ flexShrink: 0, display: 'flex', alignItems: 'center' }}>
+          <style>{`
+            .nav-logo { height: 50px; width: auto; display: block; }
+            @media (max-width: 767px) {
+              .nav-logo { height: 32px; }
+            }
+          `}</style>
           <img
             src={logoImages.tarc}
             alt="Mahindra Beacon Hill"
-            style={{ height: '50px', width: 'auto', display: 'block' }}
+            className="nav-logo"
           />
         </a>
 
