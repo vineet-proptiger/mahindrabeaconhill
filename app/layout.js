@@ -51,11 +51,11 @@ export default function RootLayout({ children }) {
               "@type": "Article",
               "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://mahindrabeaconhillmahalaxmi.in/"
+                "@id": "https://mahindrabeaconhillsmahalaxmi.co.in/"
               },
               "headline": "Mahindra Beacon Hill | Premium 3, 3.5 & 4 BHK Residences in Mahalaxmi, Mumbai",
               "description": "Mahindra Beacon Hill, South Mumbai's premier luxury high-rise in Mahalaxmi. Premium 3, 3.5 & 4 BHK residences starting from ₹6.30 Cr. MAHARERA: PM1170002600357.",
-              "image": "https://mahindrabeaconhillmahalaxmi.in/_next/image?url=%2Fimages%2Fhero%2Fbanner1.webp&w=1200&q=75",
+              "image": "https://mahindrabeaconhillsmahalaxmi.co.in/_next/image?url=%2Fimages%2Fhero%2Fbanner1.webp&w=1200&q=75",
               "author": {
                 "@type": "Organization",
                 "name": "Proptiger Marketing Services Pvt Ltd",

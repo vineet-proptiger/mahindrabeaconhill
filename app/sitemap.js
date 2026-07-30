@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const base = 'https://mahindrabeaconhillmahalaxmi.in'
+  const base = 'https://mahindrabeaconhillsmahalaxmi.co.in'
 
   return [
     {

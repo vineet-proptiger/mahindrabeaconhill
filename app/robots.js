@@ -5,7 +5,7 @@ export default function robots() {
       allow: '/',
       disallow: '',
     },
-    sitemap: 'https://mahindrabeaconhillmahalaxmi.in/sitemap.xml',
+    sitemap: 'https://mahindrabeaconhillsmahalaxmi.co.in/sitemap.xml',
   }
 }
 
