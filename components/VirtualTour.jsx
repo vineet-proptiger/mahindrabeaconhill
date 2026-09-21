@@ -9,7 +9,7 @@ const VirtualTour = ({ setIsOpen }) => {
   return (
     <section id="virtual-tour" className="relative w-full h-[60vh] min-h-[400px] md:min-h-[550px] flex items-center justify-center cursor-pointer overflow-hidden group" onClick={() => setIsOpen(true)}>
 
-      <style>{`
+      <style suppressHydrationWarning>{`
         .ripple-btn {
           position: relative;
           width: 70px;

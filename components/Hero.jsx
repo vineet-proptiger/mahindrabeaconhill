@@ -20,7 +20,7 @@ const Hero = ({ setIsOpen }) => {
 
   return (
     <section className="hero-container">
-      <style>{`
+      <style suppressHydrationWarning>{`
         .hero-container {
           position: relative;
           margin-top: 80px;
@@ -237,18 +237,23 @@ const Hero = ({ setIsOpen }) => {
 
           .hero-cta-row {
             flex-direction: column !important;
-            align-items: center !important;
+            align-items: stretch !important;
             gap: 12px !important;
             width: 100%;
           }
 
           .hero-cta-row > button,
           .hero-cta-row > a {
+            display: inline-flex !important;
+            align-self: stretch !important;
+            flex: 0 0 100% !important;
+            box-sizing: border-box !important;
             width: 100% !important;
+            max-width: none !important;
             justify-content: center !important;
             text-align: center;
-            padding: 12px 10px !important;
-            font-size: 11px !important;
+            padding: 13px 12px !important;
+            font-size: 13px !important;
             white-space: normal !important;
           }
 
@@ -359,4 +364,3 @@ const Hero = ({ setIsOpen }) => {
 }
 
 export default Hero
-

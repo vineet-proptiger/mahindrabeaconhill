@@ -58,7 +58,7 @@ const Navbar = ({ setIsOpen }) => {
 
         {/* CENTER LOGO */}
         <a href="#" style={{ flexShrink: 0, display: 'flex', alignItems: 'center' }}>
-          <style>{`
+          <style suppressHydrationWarning>{`
             .nav-logo { height: 42px; width: auto; display: block; }
             @media (max-width: 767px) {
               .nav-logo { height: 32px; }
