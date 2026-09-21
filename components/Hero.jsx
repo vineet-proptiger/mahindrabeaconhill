@@ -343,7 +343,7 @@ const Hero = ({ setIsOpen }) => {
 
           {/* Button 2 — WhatsApp (global btn-brand) */}
           <a
-            href="https://wa.me/919718344024?text=Hi%20I%20am%20interested%20in%20Mahindra%20Beacon%20Hill%20Mahalaxmi%20Mumbai"
+            href="https://wa.me/919560582493?text=Hi%20I%20am%20interested%20in%20Mahindra%20Beacon%20Hill%20Mahalaxmi%20Mumbai"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-brand"
